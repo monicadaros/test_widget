@@ -17,6 +17,7 @@ class _TestButtonState extends State<TestButton> {
   @override
   Widget build(BuildContext context) {
     return Center(
+      key: const Key("label"),
       child: Column(children: [
         ElevatedButton(
           onPressed: desableButton ? null : () {},
