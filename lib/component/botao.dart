@@ -1,33 +1,41 @@
 import 'package:flutter/material.dart';
 
-class TestButton extends StatelessWidget {
-  const TestButton({Key? key}) : super(key: key);
+class TestButton extends StatefulWidget {
+  final String label;
+  final Color cor;
+  final Color disableCor;
+  final bool isActive;
+  final VoidCallback onClick;
+  const TestButton(
+      {Key? key,
+      required this.label,
+      required this.cor,
+      required this.disableCor,
+      required this.isActive,
+      required this.onClick})
+      : super(key: key);
 
-  final bool _desableButton = true;
+  @override
+  State<TestButton> createState() => _TestButtonState();
+}
 
-  // void _desableButton(bool desable) {
-  //   setState() {
-  //     desable = !desable;
-  //   }
-
-  //   ;
-  // }
-
+class _TestButtonState extends State<TestButton> {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: Column(
-      children: [
+      child: Column(children: [
         ElevatedButton(
-          onPressed: () => _desableButton ? null : () {},
+          onPressed: widget.isActive ? widget.onClick : null,
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.pink),
+            backgroundColor: MaterialStateProperty.all(
+                widget.isActive ? widget.cor : widget.disableCor),
           ),
-          child: const Text("Ativado"),
+          child: Text(
+            widget.label,
+            style: const TextStyle(color: Colors.white),
+          ),
         ),
-        const SizedBox(height: 40),
-        ElevatedButton(onPressed: (() {}), child: const Text("Desativado"))
-      ],
-    ));
+      ]),
+    );
   }
 }
