@@ -59,8 +59,8 @@ class _MyHomePageState extends State<MyHomePage> {
               label: desableButton ? "Ativado" : "Desativado",
               cor: Colors.pink,
               disableCor: const Color.fromARGB(255, 85, 16, 39),
-              click: desableButton,
-              disable: () {
+              isActive: desableButton,
+              onClick: () {
                 setState(() => desableButton = !desableButton);
               },
             )
