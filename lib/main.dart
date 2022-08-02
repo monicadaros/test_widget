@@ -30,8 +30,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  bool desableButton = true;
-
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -54,15 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            // TestButton(
-            //   label: desableButton ? "Ativado" : "Desativado",
-            //   cor: Colors.pink,
-            //   disableCor: const Color.fromARGB(255, 85, 16, 39),
-            //   click: desableButton,
-            //   disable: () {
-            //     setState(() => desableButton = !desableButton);
-            //   },
-            // )
           ],
         ),
       ),
