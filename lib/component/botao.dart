@@ -5,14 +5,14 @@ class TestButton extends StatefulWidget {
   final Color cor;
   final Color disableCor;
   final bool click;
-  final VoidCallback? disable;
+  final VoidCallback disable;
   const TestButton(
       {Key? key,
       required this.label,
       required this.cor,
       required this.disableCor,
       required this.click,
-      this.disable})
+      required this.disable})
       : super(key: key);
 
   @override

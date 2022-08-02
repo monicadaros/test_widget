@@ -54,15 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
-            TestButton(
-              label: desableButton ? "Ativado" : "Desativado",
-              cor: Colors.pink,
-              disableCor: const Color.fromARGB(255, 85, 16, 39),
-              click: desableButton,
-              disable: () {
-                setState(() => desableButton = !desableButton);
-              },
-            )
+            // TestButton(
+            //   label: desableButton ? "Ativado" : "Desativado",
+            //   cor: Colors.pink,
+            //   disableCor: const Color.fromARGB(255, 85, 16, 39),
+            //   click: desableButton,
+            //   disable: () {
+            //     setState(() => desableButton = !desableButton);
+            //   },
+            // )
           ],
         ),
       ),

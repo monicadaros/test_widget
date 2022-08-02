@@ -1,3 +1,4 @@
+import 'package:design/component/botao.dart';
 import 'package:flutter/material.dart';
 
 class TestAppWidget extends StatelessWidget {
@@ -6,6 +7,8 @@ class TestAppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: body,
+    );
   }
 }
